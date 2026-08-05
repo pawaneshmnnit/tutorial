@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+venv/
+.venv/
+*.egg-info/
+
+# Notebooks
+.ipynb_checkpoints/
+
+# Generated features (fetch via scripts/download_assets.sh)
+Features/*.csv
+Features/*.npz
+Features/*.npy
+!Features/.gitkeep
+
+# Checkpoints (fetch via scripts/download_assets.sh)
+SavedModels/*.pth
+SavedModels/*.pt
+!SavedModels/.gitkeep
+
+# Demo output
+Results/*_demo.png
+Results/*_metrics.json
+
+# OS
+.DS_Store
+Thumbs.db

@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the paper below."
+title: "DEFT-DPT: Dynamic Egocentric Feature Transformation with Dynamic Percentile Thresholding"
+authors:
+  - family-names: "FIXME"
+    given-names: "FIXME"
+    affiliation: "MNNIT Allahabad"
+repository-code: "https://github.com/pawanesh-mnnit/deft_dpt"
+license: MIT
+preferred-citation:
+  type: conference-paper
+  title: "FIXME — paper title"
+  authors:
+    - family-names: "FIXME"
+      given-names: "FIXME"
+  collection-title: "FIXME — venue"
+  year: 2026
