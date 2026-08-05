@@ -1,0 +1,27 @@
+# EPIC-Kitchens P01_04 — RGB + Flow(u,v), ResNet-50, 3x2048 = 6144-d
+# Pairs with SavedModels/best_model.pth (input_dim 6144, 16 classes)
+name: epic_p01_04
+dataset: epic_kitchens
+
+data_root: ${DATA_ROOT}/EPIC_Kitchen      # export DATA_ROOT=/path/to/datasets
+rgb_root:    ${DATA_ROOT}/EPIC_Kitchen/RGB/P01_04
+flow_u_root: ${DATA_ROOT}/EPIC_Kitchen/OpticalFlow/P01_04/u
+flow_v_root: ${DATA_ROOT}/EPIC_Kitchen/OpticalFlow/P01_04/v
+labels:      ${DATA_ROOT}/EPIC_Kitchen/Label/P01_04.csv
+
+features:   Features/Feature_P01_04_EpicKitchen.csv
+checkpoint: SavedModels/best_model.pth
+
+frame_stride: 5
+meta_cols: 4          # Frame, Verb_class, Noun_class, ActionLabel
+feat_dim: 6144
+num_classes: 16
+
+deft:
+  sigma: 0.5
+  lambda_init: 0.5
+dpt:
+  percentile: 95
+model:
+  hidden_dim: 128
+  heads: 2

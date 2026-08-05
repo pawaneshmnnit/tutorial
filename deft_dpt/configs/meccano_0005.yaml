@@ -1,0 +1,18 @@
+# MECCANO 0005 — pairs with SavedModels/best_model_meccano.pth (2048-d, 30 classes)
+name: meccano_0005
+dataset: meccano
+
+rgb_root: ${DATA_ROOT}/MECCANO/RGB/0005
+labels:   ${DATA_ROOT}/MECCANO/Labels_ExcelFile(1-6)/0005_CSV.csv
+
+features:   Features/Feature_0005_RGB_Meccano_Sampled.csv
+checkpoint: SavedModels/best_model_meccano.pth
+
+frame_stride: 5
+meta_cols: 4
+feat_dim: 2048
+num_classes: 30
+
+deft: {sigma: 0.5, lambda_init: 0.5}
+dpt:  {percentile: 95}
+model: {hidden_dim: 128, heads: 2}

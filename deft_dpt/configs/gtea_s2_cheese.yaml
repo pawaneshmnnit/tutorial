@@ -1,0 +1,21 @@
+# GTEA S2_Cheese_C1 — pairs with SavedModels/best_model_gtea.pth
+# NOTE: that checkpoint has input_dim 2049 and 10 classes, and its tensors are
+# GAT-shaped (att_src/att_dst) despite being saved by the GCN notebook.
+# Confirm which architecture actually produced it before citing these numbers.
+name: gtea_s2_cheese
+dataset: gtea
+
+rgb_root: ${DATA_ROOT}/GTEA/GTEA_NEW/RGB/S2_Cheese_C1
+labels:   ${DATA_ROOT}/GTEA/GTEA_NEW/Label_CSV/S2_Cheese_C1.csv
+
+features:   Features/Feature_S2_Cheese_C1_GTEA.csv
+checkpoint: SavedModels/best_model_gtea.pth
+
+frame_stride: 5
+meta_cols: 4
+feat_dim: 2049
+num_classes: 10
+
+deft: {sigma: 0.5, lambda_init: 0.5}
+dpt:  {percentile: 95}
+model: {hidden_dim: 128, heads: 2}
